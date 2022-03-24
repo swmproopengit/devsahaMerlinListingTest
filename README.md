@@ -2,19 +2,29 @@
 
 [Maintainer: Saha Merlin](https://www.linkedin.com/in/merlin-saha/)
 
+Code Structure
+![Code Structure](https://github.com/swmproopengit/devsahaMerlinListingTest/blob/main/codeStructure.png?raw=true)
+
+Test Structure
+![Test Structure](https://github.com/swmproopengit/devsahaMerlinListingTest/blob/main/testStructure.png?raw=true)
+
 Installation:
 - Required: Java 11 & maven installed
 - Clone this repository
 - Move to project directory
 - To build the project Run: mvn clean install
   - A jar file will be available here target/360agency-listing-0.0.1.jar
-- For test, Run: mvn test
+    ![Build](https://github.com/swmproopengit/devsahaMerlinListingTest/blob/main/build.png?raw=true)
+  - For test, Run: mvn test
+    ![Test](https://github.com/swmproopengit/devsahaMerlinListingTest/blob/main/test.png?raw=true)
 - You don't need BD configuration here because i use H2Database
 
 To test this, you will need [Postman](https://www.postman.com/downloads/) or Another tools
+![Postman](https://github.com/swmproopengit/devsahaMerlinListingTest/blob/main/postman.png?raw=true)
 
 - API URL: http://localhost:8081
 - Documentation URL: http://localhost:8081/swagger-ui.html
+  ![Documentations](https://github.com/swmproopengit/devsahaMerlinListingTest/blob/main/documention.png?raw=true)
 
 1. Endpoints:
 - Create New Dealer: http://localhost:8081/api/v1/dealers/save
