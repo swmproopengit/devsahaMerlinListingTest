@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.devsahamerlin</groupId>
-	<artifactId>360agency-listing</artifactId>
+	<artifactId>ListingRestAPI</artifactId>
 	<version>0.0.1</version>
-	<name>360agency-listing</name>
-	<description>SM360 Backend Tech Assignment: Implement a REST service for managing listings for online advertising service.</description>
+	<name>ListingRestAPI</name>
+	<description>ListingRestAPI Backend Tech Assignment: Implement a REST service for managing listings for online advertising service.</description>
 	<properties>
 		<java.version>11</java.version>
 		<org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
@@ -140,6 +140,7 @@
 				</dependencies>
 			</plugin>
 		</plugins>
+		<finalName>ListingRestAPI</finalName>
 	</build>
 
 </project>

@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "03c6af97-dc07-49ae-a4d8-a2c75b6e3eae",
+		"name": "ListingRestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4798202"
+	},
+	"item": [
+		{
+			"name": "Save Listing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dealerId\": \"b3d3ff82-fc7e-47be-ad85-07968c36c5b7\",\n  \"vehicle\": \"Rav 4 20010\",\n  \"price\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/listing/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"listing",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Listing",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dealerId\": \"b3d3ff82-fc7e-47be-ad85-07968c36c5b7\",\n  \"vehicle\": \"Rav 4 2010\",\n  \"price\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/listing/update/9426ad15-ae74-4245-8ea3-539f4c04c48d",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"listing",
+						"update",
+						"9426ad15-ae74-4245-8ea3-539f4c04c48d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Listing By State",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/listing/listing_by_state/b3d3ff82-fc7e-47be-ad85-07968c36c5b7/DRAFT?page=0&size=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"listing",
+						"listing_by_state",
+						"b3d3ff82-fc7e-47be-ad85-07968c36c5b7",
+						"DRAFT"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publish A Listing",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/listing/publish/0af8abaa-83f5-432e-b85b-9278f158b1f4",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"listing",
+						"publish",
+						"0af8abaa-83f5-432e-b85b-9278f158b1f4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unPublish A Listing",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/listing/publish/0af8abaa-83f5-432e-b85b-9278f158b1f4",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"listing",
+						"publish",
+						"0af8abaa-83f5-432e-b85b-9278f158b1f4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save dealer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Toyota Benz\",\n  \"listingLimit\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/dealers/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"dealers",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dealer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/dealers/b3d3ff82-fc7e-47be-ad85-07968c36c5b7",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"dealers",
+						"b3d3ff82-fc7e-47be-ad85-07968c36c5b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Gealer Limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/dealers/limits/b3d3ff82-fc7e-47be-ad85-07968c36c5b7",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"dealers",
+						"limits",
+						"b3d3ff82-fc7e-47be-ad85-07968c36c5b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Dealer Limit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"listingLimit\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/dealers/limits/b3d3ff82-fc7e-47be-ad85-07968c36c5b7?listingLimit=19",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"dealers",
+						"limits",
+						"b3d3ff82-fc7e-47be-ad85-07968c36c5b7"
+					],
+					"query": [
+						{
+							"key": "listingLimit",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
