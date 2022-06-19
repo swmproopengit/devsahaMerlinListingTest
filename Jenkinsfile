@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages{
+        stage('Check jdk version'){
+            steps{
+                script{
+                    sh 'java -version'
+                }
+            }
+        }
         stage('Build Maven'){
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/swmproopengit/devsahaMerlinListingTest']]])
@@ -17,10 +24,9 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'BuildNext@Give#Up', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u devsahamerlin -p ${dockerhubpwd}'
-
-}
+                    withCredentials([string(credentialsId: 'devdockerhub-pwd', variable: 'devdockerhubpwd')]) {
+                        sh 'docker login -u devsahamerlin --password-stdin ${devdockerhubpwd}'
+                    }
                    sh 'docker push devsahamerlin/listingrestapi'
                 }
             }
