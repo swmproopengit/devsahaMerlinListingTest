@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools{
-        maven 'maven_3_5_0'
-    }
     stages{
         stage('Build Maven'){
             steps{
@@ -13,7 +10,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t devsahamerlin/ListingRestAPI .'
+                    sh 'docker build -t devsahamerlin/listingrestapi .'
                 }
             }
         }
@@ -24,7 +21,7 @@ pipeline {
                    sh 'docker login -u devsahamerlin -p ${dockerhubpwd}'
 
 }
-                   sh 'docker push devsahamerlin/ListingRestAPI'
+                   sh 'docker push devsahamerlin/listingrestapi'
                 }
             }
         }

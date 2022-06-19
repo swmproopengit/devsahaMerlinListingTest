@@ -13,7 +13,7 @@ Installation:
 - Clone this repository
 - Move to project directory
 - To build the project Run: mvn clean install
-  - A jar file will be available here target/listingapi-0.0.1.jar
+  - A jar file will be available here target/ListingRestAPI-0.0.1.jar
     ![Build](https://github.com/swmproopengit/devsahaMerlinListingTest/blob/main/build.png?raw=true)
   - For test, Run: mvn test
     ![Test](https://github.com/swmproopengit/devsahaMerlinListingTest/blob/main/test.png?raw=true)
